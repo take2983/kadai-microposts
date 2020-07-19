@@ -13,12 +13,12 @@
       </div>
     </div>
     
-<%= render "relationships/follow_button", user: @user %>
-    
+<%= render 'relationships/follow_button', user: @user %>
+
   </aside>
   <div class="col-sm-8">
     <ul class="nav nav-tabs nav-justified mb-3">
-        <li class="nav-item"><a href="
+      <li class="nav-item"><a href="
 <%= user_path(@user) %>
 " class="nav-link 
 <%= 'active' if current_page?(user_path(@user)) %>
@@ -41,7 +41,7 @@
 </span></a></li>
     </ul>
     
-<%= render 'microposts/microposts', microposts: @microposts %>
+<%= render 'users', users: @followings %>
 
   </div>
 </div>
